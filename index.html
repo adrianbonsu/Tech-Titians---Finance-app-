@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Money Mentor | Login MVP</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- WELCOME SCREEN -->
+
+    <section id="welcomePage" class="page welcome">
+
+        <div class="card">
+
+            <h1>💰 Money Mentor</h1>
+
+            <h2>Welcome to Money Mentor</h2>
+
+            <p>
+                Your personal finance companion
+                for a smarter college life.
+            </p>
+
+            <button onclick="showPage('loginPage')">
+                Get Started
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOGIN AND SIGNUP SCREEN -->
+
+    <section id="loginPage" class="page hidden">
+
+        <div class="card">
+
+            <h1>💰 Money Mentor</h1>
+
+            <h2 id="formTitle">Student Login</h2>
+
+            <p id="formDescription">
+                Login to continue your financial journey.
+            </p>
+
+            <form id="loginForm" onsubmit="handleLogin(event)">
+
+                <div id="nameGroup" class="hidden">
+
+                    <label for="fullName">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your name"
+                    >
+
+                </div>
+
+                <label for="email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="student@college.edu"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    autocomplete="current-password"
+                    minlength="6"
+                    required
+                >
+
+                <div class="show-password">
+
+                    <input
+                        type="checkbox"
+                        id="showPassword"
+                        onchange="togglePassword()"
+                    >
+
+                    <label for="showPassword">
+                        Show Password
+                    </label>
+
+                </div>
+
+                <p id="errorMessage" role="alert"></p>
+
+                <button type="submit" id="loginButton">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="switch">
+
+                <span id="switchText">
+                    Don't have an account?
+                </span>
+
+                <a href="#" onclick="switchMode(event)" id="switchLink">
+                    Sign Up
+                </a>
+
+            </p>
+
+            <button
+                class="secondary"
+                onclick="showPage('welcomePage')"
+            >
+                Back to Home
+            </button>
+
+            <p class="notice">
+                Demo only. Please do not use real passwords.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOGIN SUCCESS SCREEN -->
+
+    <section id="successPage" class="page hidden">
+
+        <div class="card">
+
+            <div class="success-icon">✓</div>
+
+            <h1>Login Successful!</h1>
+
+            <h2>
+                Welcome, <span id="studentName">Student</span>!
+            </h2>
+
+            <p>
+                You have successfully completed the
+                Money Mentor Login MVP demonstration.
+            </p>
+
+            <div class="success-message">
+                Your Money Mentor account dashboard
+                will be available in the complete application.
+            </div>
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
