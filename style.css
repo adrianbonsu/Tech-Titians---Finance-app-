@@ -1,0 +1,193 @@
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #dcfce7);
+    color: #1e293b;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* MAIN CARD */
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 430px;
+    padding: 40px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+.card h1 {
+    color: #2563eb;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+
+form {
+    text-align: left;
+}
+
+form label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0 8px;
+}
+
+form input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+/* SHOW PASSWORD */
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.show-password label {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* BUTTONS */
+
+button {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.secondary {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.secondary:hover {
+    background: #cbd5e1;
+}
+
+/* LOGIN / SIGNUP SWITCH */
+
+.switch {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.switch a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#errorMessage {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.card .notice {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* SUCCESS SCREEN */
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+    font-size: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.success-message {
+    background: #eff6ff;
+    color: #1e40af;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 480px) {
+
+    .card {
+        padding: 28px 20px;
+    }
+
+    .card h1 {
+        font-size: 24px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+}
